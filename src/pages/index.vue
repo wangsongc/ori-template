@@ -6,6 +6,7 @@
     <div><router-link class="text-router-link" to="/content">{{ $t("content") }}</router-link></div>
     <div><router-link class="text-router-link" to="/markdown">{{ $t("markdown") }}</router-link></div>
     <div><router-link class="text-router-link" to="/federation">federation</router-link></div>
+    <div><router-link class="text-router-link" to="/mavoneditor">mavoneditor</router-link></div>
   </div>
 </template>
 

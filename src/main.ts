@@ -1,17 +1,18 @@
-import { createApp, defineAsyncComponent } from 'vue'
-import { createI18n } from 'vue-i18n'
-import { createRouter, createWebHistory } from 'vue-router'
-import en from './locales/en.json'
-import zh from './locales/zh.json'
-import App from './App.vue'
-import store from './store'
-import FederationErrorComponent from './components/FederationErrorComponent.vue'
-import routes from 'virtual:plugin-pages'
+import { createApp, defineAsyncComponent } from 'vue';
+import { createI18n } from 'vue-i18n';
+import { createRouter, createWebHistory } from 'vue-router';
+import en from './locales/en.json';
+import zh from './locales/zh.json';
+import App from './App.vue';
+import store from './store';
+import FederationErrorComponent from './components/FederationErrorComponent.vue';
+import routes from 'virtual:plugin-pages';
+import { usePlugins } from './plugins';
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-})
+  routes
+});
 
 const i18n = createI18n({
   legacy: false,
@@ -22,12 +23,13 @@ const i18n = createI18n({
     en,
     zh
   }
-})
+});
 
 const app = createApp(App);
 const remoteComponent = defineAsyncComponent({
   loader: () => import('remote/RemoteComponent'),
-  errorComponent: FederationErrorComponent,
+  errorComponent: FederationErrorComponent
 });
-app.component("RemoteComponent", remoteComponent)
-app.use(router).use(store).use(i18n).mount('#app')
+app.component('RemoteComponent', remoteComponent);
+usePlugins(app);
+app.use(router).use(store).use(i18n).mount('#app');

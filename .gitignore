@@ -6,3 +6,4 @@ dist-ssr
 .origin
 *.d.ts
 coverage
+yarn.lock

@@ -20,5 +20,5 @@ export default {
 </script>
 
 <layout>
-layout: profile
+layout: default
 </layout>

@@ -1,4 +1,5 @@
 import { App, Component } from 'vue';
+import 'element-plus/dist/index.css'
 import {
   ElTag,
   ElAffix,
@@ -52,7 +53,11 @@ import {
   ElOption,
   // 指令
   ElLoading,
-  ElInfiniteScroll
+  ElInfiniteScroll,
+  ElHeader,
+  ElMain,
+  ElAside,
+  ElContainer,
 } from 'element-plus';
 
 // Directives
@@ -108,7 +113,11 @@ const components = [
   ElLink,
   ElColorPicker,
   ElSelect,
-  ElOption
+  ElOption,
+  ElHeader,
+  ElMain,
+  ElAside,
+  ElContainer,
 ];
 
 export function useElementPlus(app: App) {

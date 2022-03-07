@@ -256,9 +256,9 @@ code {
     line-height: 2.4rem;
   }
 
-  #app main {
+  /* #app main {
     height: device-height;
-  }
+  } */
 
   .theme-ctrl-btn {
     margin-top: 1.8rem;

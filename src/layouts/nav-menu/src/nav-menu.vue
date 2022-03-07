@@ -24,7 +24,7 @@
             </template>
             <!-- 遍历里面的item -->
             <template v-for="subitem in item.children" :key="subitem.id">
-              <el-menu-item :index="'/' + item.url">
+              <el-menu-item :index="'/' + subitem.path">
                 <i v-if="subitem.icon" :class="subitem.icon"></i>
                 <span>{{ subitem.name }}</span>
               </el-menu-item>
@@ -34,7 +34,7 @@
 
         <!-- 一级菜单 -->
         <template v-else-if="item.type === 2">
-          <el-menu-item :index="item.id + ''">
+          <el-menu-item :index="'/' + item.path">
             <i v-if="item.icon" :class="item.icon"></i>
             <span>{{ item.name }}</span>
           </el-menu-item>
@@ -59,39 +59,27 @@ export default defineComponent({
       {
         type: 1,
         id: 10,
-        name: '主菜单',
+        name: 'editor',
         icon: '',
-        url: '',
+        path: '',
         children: [
           {
             type: 1,
             id: 13,
-            name: '子菜单1',
+            name: 'mavoneditor',
             icon: '',
-            url: '/content',
-          },{
-            type: 1,
-            id: 12,
-            name: '子菜单2',
-            icon: '',
-            url: 'bbb',
-          }
+            path: 'mavoneditor/mavoneditor'
+          },
         ]
       },
       {
-        type: 1,
+        type: 2,
         id: 11,
-        name: '主菜单',
+        name: 'federation',
         icon: '',
-        children: [
-          {
-            type: 1,
-            id: 2,
-            name: '子菜单',
-            icon: ''
-          }
-        ]
-      },{
+        path: 'federation/federation'
+      },
+      {
         type: 1,
         id: 13,
         name: '主菜单',
@@ -101,10 +89,11 @@ export default defineComponent({
             type: 1,
             id: 14,
             name: '子菜单',
-            icon: ''
+            icon: '',
+            path: 'bbb',
           }
         ]
-      },
+      }
     ]);
     return { userMenus };
   }

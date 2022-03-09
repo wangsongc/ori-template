@@ -68,28 +68,28 @@ export default defineComponent({
             id: 2,
             name: 'mavon-editor',
             icon: '',
-            path: 'mavoneditor/mavoneditor'
+            path: 'VueEco/mavoneditor/mavoneditor'
           },
           {
             type: 1,
             id: 3,
             name: 'vue-grid-layout',
             icon: '',
-            path: 'vuegridlayout/vuegridlayout'
+            path: 'VueEco/vuegridlayout/vuegridlayout'
           },
           {
             type: 1,
             id: 4,
             name: 'swiper',
             icon: '',
-            path: 'swiper/swiper'
+            path: 'VueEco/swiper/swiper'
           },
           {
             type: 1,
             id: 4,
             name: 'draggable',
             icon: '',
-            path: 'draggable/draggable'
+            path: 'VueEco/draggable/draggable'
           }
         ]
       },

@@ -1,30 +1,30 @@
 <template>
-  <div class="container">
-    <div>
-      <span>
-        mavonEditor - A markdown editor based on Vue that supports a variety of personalized features
-      </span>
-    </div>
-    <div id="editor">
-      <mavon-editor
-        style="height: 100%"
-        v-model="code"
-        :codeStyle="codeStyle"
-        :xssOptions="xssOptions"
-      ></mavon-editor>
-    </div>
-    <div class="switch-code-style">
-      <span>code style:</span>
-      <select v-model="codeStyle">
-        <option v-for="(val, key) in stylesAll" :value="key">{{ key }}</option>
-      </select>
-    </div>
-  </div>
-</template>
+  <el-card shadow="always">
+    mavonEditor - A markdown editor based on Vue that supports a variety of
+    personalized features.
+  </el-card>
 
-<layout>
-layout: default
-</layout>
+  <el-card shadow="always">
+    <div class="container">
+      <div id="editor">
+        <mavon-editor
+          style="height: 100%"
+          v-model="code"
+          :codeStyle="codeStyle"
+          :xssOptions="xssOptions"
+        ></mavon-editor>
+      </div>
+      <div class="switch-code-style">
+        <span>code style:</span>
+        <select v-model="codeStyle">
+          <option v-for="(val, key) in stylesAll" :value="key">
+            {{ key }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </el-card>
+</template>
 
 <script script lang="ts">
 import { defineComponent, computed, ref, reactive } from 'vue';
@@ -48,18 +48,19 @@ public abstract strictfp class L2Char extends L2Object {
 export default {
   name: 'Markdown',
   components: {},
-  
+
   setup() {
     const codeStyle = ref('github');
     const xssOptions = reactive({
-        whiteList: {
-          span: ['style']
-        }
-      })
-    const code = '<span style="color:red;font-size:36px;">A</span> \n```' +
-        codeJava +
-        '\n```'
-    const stylesAll = styles
+      whiteList: {
+        span: ['style']
+      }
+    });
+    const code =
+      '<span style="color:red;font-size:36px;">A</span> \n```' +
+      codeJava +
+      '\n```';
+    const stylesAll = styles;
     return {
       codeStyle,
       xssOptions,

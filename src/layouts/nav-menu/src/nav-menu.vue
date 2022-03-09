@@ -58,39 +58,83 @@ export default defineComponent({
     const userMenus = reactive([
       {
         type: 1,
-        id: 10,
-        name: 'editor',
+        id: 1,
+        name: 'VueEco',
         icon: '',
         path: '',
         children: [
           {
             type: 1,
-            id: 13,
-            name: 'mavoneditor',
+            id: 2,
+            name: 'mavon-editor',
             icon: '',
             path: 'mavoneditor/mavoneditor'
           },
+          {
+            type: 1,
+            id: 3,
+            name: 'vue-grid-layout',
+            icon: '',
+            path: 'vuegridlayout/vuegridlayout'
+          },
+          {
+            type: 1,
+            id: 4,
+            name: 'swiper',
+            icon: '',
+            path: 'swiper/swiper'
+          },
+          {
+            type: 1,
+            id: 4,
+            name: 'draggable',
+            icon: '',
+            path: 'draggable/draggable'
+          }
         ]
       },
       {
-        type: 2,
-        id: 11,
-        name: 'federation',
+        type: 1,
+        id: 5,
+        name: 'OriPlugins',
         icon: '',
-        path: 'federation/federation'
+        path: '',
+        children: [
+          {
+            type: 1,
+            id: 6,
+            name: 'vite-plugin-federation',
+            icon: '',
+            path: 'OriPlugins/vite-plugin-federation/vite-plugin-federation'
+          },
+          {
+            type: 1,
+            id: 7,
+            name: 'vite-plugin-global-style',
+            icon: '',
+            path: 'OriPlugins/vite-plugin-global-style/vite-plugin-global-style'
+          },
+          {
+            type: 1,
+            id: 8,
+            name: 'vite-plugin-content',
+            icon: '',
+            path: 'OriPlugins/vite-plugin-content/vite-plugin-content'
+          }
+        ]
       },
       {
         type: 1,
-        id: 13,
-        name: '主菜单',
+        id: 10,
+        name: '常用功能示例',
         icon: '',
         children: [
           {
             type: 1,
-            id: 14,
-            name: '子菜单',
+            id: 11,
+            name: '用户管理',
             icon: '',
-            path: 'bbb',
+            path: 'bbb'
           }
         ]
       }
@@ -139,7 +183,7 @@ export default defineComponent({
     }
   }
 
-  ::v-deep .el-sub-menu__title {
+  :deep(.el-sub-menu__title) {
     background-color: #001529 !important;
   }
 

@@ -7,6 +7,7 @@ import content from '@originjs/vite-plugin-content'
 import pages from '@originjs/vite-plugin-pages'
 import markdown from 'vite-plugin-md'
 import federation from '@originjs/vite-plugin-federation'
+import { viteMockServe } from 'vite-plugin-mock'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
       replacement: path.resolve(__dirname, 'src'),
     }],
   },
+  assetsInclude: ['assets/**/*.jpg'],
   plugins:[
     vue({
       include: [/\.vue$/, /\.md$/],
@@ -39,6 +41,16 @@ export default defineConfig({
         remote: 'http://localhost:3072/assets/remoteEntry.js',
       },
       shared: ['vue'],
+    }),
+    viteMockServe({
+      mockPath: 'mock',
+      localEnabled: true,
+      prodEnabled: true,
+      injectCode: `
+        import { setupProdMockServer } from './mockProdServer';
+        setupProdMockServer();
+      `,
+      logger: true,
     }),
   ],
   define: {

@@ -17,7 +17,7 @@
       <div class="switch-code-style">
         <span>code style:</span>
         <select v-model="codeStyle">
-          <option v-for="(val, key) in stylesAll" :value="key">
+          <option v-for="(val, key) in stylesAll" :value="key" :key="val">
             {{ key }}
           </option>
         </select>

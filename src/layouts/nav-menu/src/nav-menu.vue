@@ -57,6 +57,13 @@ export default defineComponent({
   setup() {
     const userMenus = reactive([
       {
+        type: 2,
+        id: 0,
+        name: 'Dashboard',
+        icon: '',
+        path: '/'
+      },
+      {
         type: 1,
         id: 1,
         name: 'VueEco',
@@ -68,7 +75,10 @@ export default defineComponent({
             id: 2,
             name: 'mavon-editor',
             icon: '',
-            path: 'VueEco/mavoneditor/mavoneditor'
+            path: 'VueEco/mavoneditor/mavoneditor',
+            mate: {
+              title: 'mavoneditor'
+            }
           },
           {
             type: 1,

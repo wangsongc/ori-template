@@ -1,0 +1,79 @@
+<template>
+  <el-breadcrumb id="breadcrumb-container" class="app-breadcrumb" separator="/">
+    <el-breadcrumb-item>
+      <a :href="route.path">{{ route.path.slice(1) }}</a>
+    </el-breadcrumb-item>
+  </el-breadcrumb>
+</template>
+
+<script setup lang="ts">
+import { ref, onBeforeMount, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+//i18n
+// import useI18n from '@/hooks/useI18n'
+// const { generateTitle } = useI18n()
+
+import { compile } from 'path-to-regexp';
+let levelList = ref(null);
+//Whether close the animation fo breadcrumb
+// import { useStore } from 'vuex'
+// let store = useStore()
+// let settings = computed(() => {
+//   return store.state.app.settings
+// })
+debugger;
+const route = useRoute();
+const router = useRouter();
+const getBreadcrumb = () => {
+  // only show routes with meta.title
+  let matched = route.matched;
+  const first = matched[0];
+  if (!isDashboard(first)) {
+    //it can replace the first page if not exits
+    matched = [{ path: '/', meta: { title: 'Dashboard' } }].concat(matched);
+  }
+  debugger;
+  levelList.value = matched;
+};
+
+const isDashboard = (route) => {
+  const name = route?.name;
+  if (!name) {
+    return false;
+  }
+  return name.trim().toLocaleLowerCase() === 'Dashboard'.toLocaleLowerCase();
+};
+const pathCompile = (path) => {
+  const { params } = route;
+  const toPath = compile(path);
+  return toPath(params);
+};
+const handleLink = (item) => {
+  const { redirect, path } = item;
+  if (redirect) {
+    router.push(redirect);
+    return;
+  }
+  router.push(pathCompile(path));
+};
+watch(
+  () => route.path,
+  () => {
+    debugger;
+    getBreadcrumb();
+  },
+  { immediate: true }
+);
+onBeforeMount(() => {
+  getBreadcrumb();
+});
+</script>
+
+<style lang="scss" scoped>
+.app-breadcrumb.el-breadcrumb {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 50px;
+  margin-left: 8px;
+}
+</style>

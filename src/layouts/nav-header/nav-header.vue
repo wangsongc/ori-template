@@ -5,14 +5,19 @@
       :class="isFold ? 'el-icon-s-fold' : 'el-icon-s-unfold'"
       @click="handleFoldClick"
     ></i>
+    <Breadcrumb></Breadcrumb>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import Breadcrumb from './src'
 
 export default defineComponent({
   emits: ['foldChange'],
+  components:{
+    Breadcrumb
+  },
   setup(props, { emit }) {
     const isFold = ref(false)
     const handleFoldClick = () => {

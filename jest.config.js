@@ -1,5 +1,6 @@
 module.exports = {
   preset: 'ts-jest',
+  testMatch: [ "**/tests/components/*.[jt]s?(x)"],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^~/(.*)$': '<rootDir>/$1',

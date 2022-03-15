@@ -6,6 +6,8 @@
     "dev": "vite",
     "serve": "vite preview",
     "test": "jest",
+    "e2e": "yarn playwright test --headed",
+    "e2e:debug": "set PWDEBUG=1 && yarn playwright test --headed",
     "build": "vite build",
     "mock": "node ../mock/mockServer"
   },
@@ -35,6 +37,7 @@
     "@originjs/vite-plugin-federation": "^1.0.0",
     "@originjs/vite-plugin-global-style": "^1.0.2",
     "@originjs/vite-plugin-pages": "^1.0.1-beta.2",
+    "@playwright/test": "^1.19.2",
     "@types/jest": "^26.0.24",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/compiler-sfc": "^3.0.5",

@@ -7,3 +7,5 @@ dist-ssr
 *.d.ts
 coverage
 yarn.lock
+test-results/
+playwright-report/

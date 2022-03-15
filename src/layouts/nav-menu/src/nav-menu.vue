@@ -63,17 +63,17 @@ export default defineComponent({
         icon: '',
         path: '/'
       },
-      {
+       {
         type: 1,
         id: 1,
-        name: 'VueEco',
+        name: 'VueCore',
         icon: '',
         path: '',
         children: [
           {
             type: 1,
             id: 2,
-            name: 'mavon-editor',
+            name: 'VueRouter',
             icon: '',
             path: 'VueEco/mavoneditor/mavoneditor',
             mate: {
@@ -83,20 +83,53 @@ export default defineComponent({
           {
             type: 1,
             id: 3,
-            name: 'vue-grid-layout',
+            name: 'Pinia',
             icon: '',
             path: 'VueEco/vuegridlayout/vuegridlayout'
           },
           {
             type: 1,
             id: 4,
+            name: 'VueI8n',
+            icon: '',
+            path: 'VueEco/swiper/swiper'
+          },
+        ]
+      },
+      {
+        type: 1,
+        id: 5,
+        name: 'VueEco',
+        icon: '',
+        path: '',
+        children: [
+          {
+            type: 1,
+            id: 6,
+            name: 'mavon-editor',
+            icon: '',
+            path: 'VueEco/mavoneditor/mavoneditor',
+            mate: {
+              title: 'mavoneditor'
+            }
+          },
+          {
+            type: 1,
+            id: 7,
+            name: 'vue-grid-layout',
+            icon: '',
+            path: 'VueEco/vuegridlayout/vuegridlayout'
+          },
+          {
+            type: 1,
+            id: 8,
             name: 'swiper',
             icon: '',
             path: 'VueEco/swiper/swiper'
           },
           {
             type: 1,
-            id: 4,
+            id: 9,
             name: 'draggable',
             icon: '',
             path: 'VueEco/draggable/draggable'
@@ -105,28 +138,28 @@ export default defineComponent({
       },
       {
         type: 1,
-        id: 5,
+        id: 10,
         name: 'OriPlugins',
         icon: '',
         path: '',
         children: [
           {
             type: 1,
-            id: 6,
+            id: 11,
             name: 'vite-plugin-federation',
             icon: '',
             path: 'OriPlugins/vite-plugin-federation/vite-plugin-federation'
           },
           {
             type: 1,
-            id: 7,
+            id: 12,
             name: 'vite-plugin-global-style',
             icon: '',
             path: 'OriPlugins/vite-plugin-global-style/vite-plugin-global-style'
           },
           {
             type: 1,
-            id: 8,
+            id: 13,
             name: 'vite-plugin-content',
             icon: '',
             path: 'OriPlugins/vite-plugin-content/vite-plugin-content'
@@ -135,13 +168,13 @@ export default defineComponent({
       },
       {
         type: 1,
-        id: 10,
+        id: 14,
         name: '常用功能示例',
         icon: '',
         children: [
           {
             type: 1,
-            id: 11,
+            id: 15,
             name: '用户管理',
             icon: '',
             path: 'bbb'

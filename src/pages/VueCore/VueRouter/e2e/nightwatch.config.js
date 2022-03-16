@@ -9,14 +9,14 @@ const browserDefaults = {
     enabled: true,
     on_failure: true,
     on_error: false,
-    path: 'e2e/screenshots',
+    path: 'screenshots',
   },
 }
 
 /** @type {import('nightwatch').NightwatchOptions} */
 module.exports = {
-  src_folders: ['e2e/specs'],
-  output_folder: 'e2e/reports',
+  src_folders: ['specs/encoding.js'],
+  output_folder: 'reports',
   custom_commands_path: ['node_modules/nightwatch-helpers/commands'],
   custom_assertions_path: ['node_modules/nightwatch-helpers/assertions'],
   // set to true when testing on multiple browsers (-e chrome,firefox) to display tests as they pass instead of waiting for everything to be finished

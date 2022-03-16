@@ -6,7 +6,7 @@ import {
   onBeforeRouteLeave,
   useRoute,
   useRouter,
-} from '../../src'
+} from 'vue-router'
 import { createApp, ref, reactive, defineComponent, computed } from 'vue'
 
 // override existing style on dev with shorter times

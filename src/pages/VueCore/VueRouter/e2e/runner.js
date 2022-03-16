@@ -93,7 +93,7 @@ function adaptArgv(argv) {
 
 process.mainModule.filename = resolve(
   __dirname,
-  '../node_modules/.bin/nightwatch'
+  './node_modules/.bin/nightwatch'
 )
 
 if (isLocal) {

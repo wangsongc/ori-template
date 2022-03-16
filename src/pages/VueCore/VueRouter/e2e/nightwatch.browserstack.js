@@ -5,8 +5,8 @@
 const { BS_USER, BS_KEY } = process.env
 
 const nwConf = {
-  src_folders: ['e2e/specs'],
-  output_folder: 'e2e/reports',
+  src_folders: ['specs'],
+  output_folder: 'reports',
   custom_commands_path: ['node_modules/nightwatch-helpers/commands'],
   custom_assertions_path: ['node_modules/nightwatch-helpers/assertions'],
   // set to true when testing on multiple browsers (-e chrome,firefox) to display tests as they pass instead of waiting for everything to be finished

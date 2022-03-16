@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="transitions"
+    errors="1" failures="0" hostname="" id="" package="transitions" skipped="2"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+        Error: An error occurred while retrieving a new session: &#34;Unable to create session from {&#34;
+       at endReadableNT (internal/streams/readable.js:1317:12)
+       at processTicksAndRejections (internal/process/task_queues.js:82:21)
+    </system-err>
+  
+
+    
+    <error message="An error occurred while retrieving a new session: &#34;Unable to create session from {&#34;"><![CDATA[
+      Error: An error occurred while retrieving a new session: &#34;Unable to create session from {&#34;
+    at Selenium2Protocol.handleSessionCreateError (D:\work\ori测试\router\node_modules\nightwatch\lib\transport\transport.js:110:15)
+    at HttpRequest.&lt;anonymous&gt; (D:\work\ori测试\router\node_modules\nightwatch\lib\transport\transport.js:166:32)
+    at HttpRequest.emit (events.js:400:28)
+    at HttpResponse.&lt;anonymous&gt; (D:\work\ori测试\router\node_modules\nightwatch\lib\http\request.js:143:19)
+    at HttpResponse.emit (events.js:400:28)
+    at IncomingMessage.&lt;anonymous&gt; (D:\work\ori测试\router\node_modules\nightwatch\lib\http\response.js:60:14)
+    at IncomingMessage.emit (events.js:412:35)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+      ]]></error>  
+
+  
+    
+    <testcase
+      name="transitions" classname="transitions">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="out in transitions" classname="transitions">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

@@ -18,6 +18,11 @@ export default defineConfig({
     }],
   },
   assetsInclude: ['assets/**/*.jpg'],
+  server: {
+    fs: {
+      strict: false
+    }
+  },
   plugins:[
     vue({
       include: [/\.vue$/, /\.md$/],

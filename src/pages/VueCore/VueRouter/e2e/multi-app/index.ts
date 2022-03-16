@@ -1,6 +1,6 @@
 import '../global.css'
-import { createRouter, createWebHistory } from '../../src'
-import { RouteComponent } from '../../src/types'
+import { createRouter, createWebHistory, RouteComponent } from 'vue-router'
+// import { RouteComponent } from '../../src/types'
 import { createApp, ref, watchEffect, App, inject } from 'vue'
 
 const Home: RouteComponent = {

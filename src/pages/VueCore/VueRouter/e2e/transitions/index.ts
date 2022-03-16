@@ -1,6 +1,6 @@
 import '../global.css'
-import { createRouter, createWebHistory } from '../../src'
-import { RouteComponent } from '../../src/types'
+import { createRouter, createWebHistory, RouteComponent } from 'vue-router'
+// import { RouteComponent } from '../../src/types'
 import { createApp, defineComponent, nextTick, ref } from 'vue'
 
 // const delay = (t: number) => new Promise(r => setTimeout(r, t))

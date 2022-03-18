@@ -15,7 +15,7 @@ const browserDefaults = {
 
 /** @type {import('nightwatch').NightwatchOptions} */
 module.exports = {
-  src_folders: ['specs/encoding.js'],
+  src_folders: ['specs/'],
   output_folder: 'reports',
   custom_commands_path: ['node_modules/nightwatch-helpers/commands'],
   custom_assertions_path: ['node_modules/nightwatch-helpers/assertions'],
@@ -29,7 +29,7 @@ module.exports = {
     port: 4444,
     server_path: require('selenium-server').path,
     cli_args: {
-      'webdriver.chrome.driver': require('chromedriver').path,
+      // 'webdriver.chrome.driver': require('chromedriver').path,
       // 'webdriver.gecko.driver': require('geckodriver').path,
     },
   },

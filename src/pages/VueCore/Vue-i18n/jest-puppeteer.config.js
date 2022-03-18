@@ -1,6 +1,6 @@
 module.exports = {
   server: {
-    command: 'node -r esbuild-register ./scripts/serve.ts'
+    command: 'node -r esbuild-register ./serve.ts'
   },
   launch: {
     dumpio: false,

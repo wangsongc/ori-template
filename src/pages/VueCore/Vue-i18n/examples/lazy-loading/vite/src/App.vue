@@ -27,7 +27,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, watch, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -37,7 +37,7 @@ export default defineComponent({
   name: 'App',
   setup() {
     const router = useRouter()
-    const { t, locale } = useI18n() // same as `useI18n({ useScope: 'global' })`
+    const { t, locale } = useI18n({ useScope: 'global' })
 
     /**
      * select locale value for language select form
@@ -50,7 +50,7 @@ export default defineComponent({
 
     // sync to switch locale from router locale path
     watch(router.currentRoute, route => {
-      currentLocale.value = route.params.locale as string
+      currentLocale.value = route.params.locale
     })
 
     /**
@@ -61,7 +61,7 @@ export default defineComponent({
      */
     watch(currentLocale, val => {
       router.push({
-        name: router.currentRoute.value.name!,
+        name: router.currentRoute.value.name,
         params: { locale: val }
       })
     })

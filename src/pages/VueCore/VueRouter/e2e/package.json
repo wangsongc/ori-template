@@ -4,7 +4,7 @@
   "main": "browserstack-send-status.js",
   "scripts": {
     "dev": "vite --config vite.config.js",
-    "test": "node runner.js -e chrome --tag no-headless"
+    "test:e2e": "node runner.js -e chrome --tag no-headless"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "nightwatch-helpers": "^1.2.0",
     "selenium-server": "^3.141.59",
     "vite": "~2.8.6",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.13"
+    "vue": "3.2.31",
+    "vue-router": "4.0.12"
   }
 }

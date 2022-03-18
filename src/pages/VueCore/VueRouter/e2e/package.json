@@ -4,7 +4,8 @@
   "main": "browserstack-send-status.js",
   "scripts": {
     "dev": "vite --config vite.config.js",
-    "test:e2e": "node runner.js -e chrome --tag no-headless"
+    "test:e2e": "node runner.js -e chrome --tag no-headless",
+    "test:e2e:headless": "node runner.js -e chrome-headless --skiptags no-headless"
   },
   "author": "",
   "license": "ISC",

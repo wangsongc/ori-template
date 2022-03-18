@@ -34,4 +34,5 @@ jobs:
       run: |
         cd src/pages/VueCore/VueRouter/e2e
         yarn
-        yarn test:e2e
+        yarn add chromedriver@98
+        yarn test:e2e:headless

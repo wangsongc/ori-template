@@ -8,7 +8,6 @@
     "test": "jest",
     "e2e": "yarn playwright test --headed",
     "e2e:debug": "set PWDEBUG=1 && yarn playwright test --headed",
-    "test:e2e:headless": "node src/pages/VueCore/VueRouter/e2e/runner.js -e chrome-headless --skiptags no-headless",
     "build": "vite build",
     "mock": "node ../mock/mockServer"
   },

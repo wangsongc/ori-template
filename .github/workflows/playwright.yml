@@ -35,7 +35,7 @@ jobs:
         yarn test:e2e
     - name: Run VueRouter tests
       run: |
-        cd src/pages/VueCore/VueRouter/e2e
+        cd src/pages/VueCore/VueRouter
         yarn
         yarn add chromedriver@98
         yarn test:e2e:headless

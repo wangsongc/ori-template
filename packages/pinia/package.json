@@ -1,0 +1,26 @@
+{
+  "name": "@pinia/playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "play": "vite",
+    "play:build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.0",
+    "vite": "^2.8.1"
+  },
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.2.30",
+    "@vueuse/core": "^7.6.1",
+    "@types/lodash.kebabcase": "^4.1.6",
+    "lodash.kebabcase": "^4.1.1",
+    "mande": "^1.0.0",
+    "pinia": "2.0.11",
+    "swrv": "^1.0.0-beta.8",
+    "vue": "3.2.31",
+    "vue-promised": "^2.2.0",
+    "vue-router": "4.0.12"
+  }
+}

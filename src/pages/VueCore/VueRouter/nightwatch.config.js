@@ -29,6 +29,7 @@ module.exports = {
     port: 4444,
     server_path: require('selenium-server').path,
     cli_args: {
+      //windows本地运行需要修改此处
       // 'webdriver.chrome.driver': require('chromedriver').path,
       // 'webdriver.gecko.driver': require('geckodriver').path,
     },
